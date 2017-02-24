@@ -26,5 +26,10 @@ namespace CompetitionApp
         {
             this.InitializeComponent();
         }
+
+        private void OnSubmitEvaluation(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
