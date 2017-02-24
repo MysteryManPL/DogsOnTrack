@@ -1,0 +1,68 @@
+﻿<Page
+    x:Class="CompetitionApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CompetitionApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" >
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="90"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="79*"/>
+            <RowDefinition Height="56*"/>
+            <RowDefinition Height="56*"/>
+            <RowDefinition Height="63*"/>
+            <RowDefinition Height="115*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Cool Apps Competition" VerticalAlignment="Center" FontSize="36" Width="391" Margin="20,0,0,0"/>
+        <StackPanel Margin="20,20,50,20" Grid.Row="1">
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Team Name" VerticalAlignment="Top" FontSize="24" Height="32" Width="126"/>
+            <TextBox x:Name="_txtTeamName" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="20" Margin="0,10,0,0" PlaceholderText="Enter the name of the team"/>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Margin="20,20,50,20">
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Project" VerticalAlignment="Top" FontSize="24"/>
+            <TextBox x:Name="_txtProjName" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="20" Margin="0,10,0,0" PlaceholderText="Enter the project name to evaluate"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Margin="20,20,40,20" Orientation="Vertical" Grid.Row="1">
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Text="Judge Name"/>
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Text="Robert Kostka" FontWeight="Bold" Margin="0,13,0,0"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Margin="20,20,40,20" Orientation="Vertical" Grid.Row="2">
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Text="Company"/>
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Text="991443642" FontWeight="Bold" Margin="0,13,0,0"/>
+        </StackPanel>
+        <TextBlock HorizontalAlignment="Left" Margin="20,0,0,20" TextWrapping="Wrap" Text="Criteria" VerticalAlignment="Bottom" FontSize="24" Grid.Row="3"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Score (1 - 4)" VerticalAlignment="Bottom" FontSize="24" Grid.Column="1" Grid.Row="3" Margin="20,0,0,20"/>
+        <TextBlock Margin="20,10" TextWrapping="Wrap" Text="Real-World Application" VerticalAlignment="Center" FontSize="22" Grid.Row="4"/>
+        <ComboBox x:Name="_cmbApplScore" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="20" Grid.Column="1" Grid.Row="4" Margin="20,10,0,10" PlaceholderText="Rank the real-world application" Width="448">
+            <x:Int32>1</x:Int32>
+            <x:Int32>2</x:Int32>
+            <x:Int32>3</x:Int32>
+            <x:Int32>4</x:Int32>
+        </ComboBox>
+        <TextBlock Margin="20,10" TextWrapping="Wrap" Text="Impact" VerticalAlignment="Center" FontSize="22" Grid.Row="5"/>
+        <ComboBox x:Name="_cmbImpactScore" HorizontalAlignment="Left" Margin="20,10,0,10" VerticalAlignment="Center" FontSize="20" Grid.Column="1" Grid.Row="5" PlaceholderText="Rank the impact of the app" Width="448">
+            <x:Int32>1</x:Int32>
+            <x:Int32>2</x:Int32>
+            <x:Int32>3</x:Int32>
+            <x:Int32>4</x:Int32>
+        </ComboBox>
+        <TextBlock Margin="20,10" TextWrapping="Wrap" Text="Technical Relevance" VerticalAlignment="Center" FontSize="22" Grid.Row="6" Height="29"/>
+        <ComboBox x:Name="_cmbTechScore" HorizontalAlignment="Left" Margin="20,14,0,13" VerticalAlignment="Center" FontSize="20" Grid.Column="1" Grid.Row="6" PlaceholderText="Rank the technical relevance" Width="448">
+            <x:Int32>1</x:Int32>
+            <x:Int32>2</x:Int32>
+            <x:Int32>3</x:Int32>
+            <x:Int32>4</x:Int32>
+        </ComboBox>
+        <Button x:Name="_btnSubmitEval" Content="Submit Evaluation" HorizontalAlignment="Left" Margin="83,0,0,30" VerticalAlignment="Bottom" Width="191" FontSize="20" Grid.Row="7" Height="39"/>
+        <Button x:Name="_btnDetWinner" Content="Determine Winner" HorizontalAlignment="Left" Margin="151,0,0,30" VerticalAlignment="Bottom" Width="191" FontSize="20" Grid.Column="1" Grid.Row="7" Height="39"/>
+    </Grid>
+</Page>
